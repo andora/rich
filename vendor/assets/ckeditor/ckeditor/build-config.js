@@ -14,7 +14,7 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'moono',
+	skin: 'kama',
 	preset: 'full',
 	ignore: [
 		'dev',
@@ -99,5 +99,7 @@ var CKBUILDER_CONFIG = {
 	},
 	languages : {
 		'en' : 1,
+		'ru' : 1,
+		'uk' : 1
 	}
 };
