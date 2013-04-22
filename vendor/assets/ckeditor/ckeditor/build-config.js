@@ -92,14 +92,11 @@ var CKBUILDER_CONFIG = {
 		'fakeobjects' : 1,
 		'richcombo' : 1,
 		'listblock' : 1,
-		'menubutton' : 1,
-		'codemirror' : 1,
-		'iframedialog' : 1,
-		'stylesheetparser' : 1
+		'menubutton' : 1
 	},
 	languages : {
 		'en' : 1,
 		'ru' : 1,
-		'uk' : 1
+		'uk' : 1,
 	}
 };
