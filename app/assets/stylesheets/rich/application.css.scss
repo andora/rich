@@ -76,7 +76,7 @@ header {
 	background: $subtle;
 	border-bottom: 1px solid white;
 	
-	@include box-shadow(0, 0, 4px, rgba(0,0,0,0.5))	
+	@include box-shadow(0, 0, 4px, rgba(0,0,0,0.5));
 }
 
 #loading {
@@ -169,7 +169,7 @@ header {
 		}
 		
 		.new {
-			@include box-shadow(0, 0, 4px, rgb(58,194,207))
+			@include box-shadow(0, 0, 4px, rgb(58,194,207));
 		}
 		
 		.spinner {
