@@ -5,8 +5,6 @@ require 'kaminari'
 module Rich
   class RichFile < ActiveRecord::Base
 
-    attr_accessible :rich_file_file_name, :rich_file_content_type, :rich_file_file_size, :rich_file_updated_at, :owner_type, :owner_id, :uri_cache, :simplified_type
-
     scope :images, where("rich_rich_files.simplified_type = 'image'")
     scope :files, where("rich_rich_files.simplified_type = 'file'")
     
@@ -37,7 +35,11 @@ module Rich
     end
     
     private
-    
+
+    def rich_file_params
+      params.require(:rich_file).permit(:rich_file_file_name, :rich_file_content_type, :rich_file_file_size, :rich_file_updated_at, :owner_type, :owner_id, :uri_cache, :simplified_type)
+    end
+
     def cache_style_uris_and_save
       cache_style_uris
       self.save!
