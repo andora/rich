@@ -14,10 +14,13 @@ module Rich
                       :styles => Proc.new {|a| a.instance.set_styles },
                       :convert_options => Proc.new { |a| Rich.convert_options[a] }
     
-    validates_attachment_presence :rich_file
     validate :check_content_type
+    validates_attachment_content_type :rich_file, :content_type => /\Aimage\/.*\Z/
     validates_attachment_size :rich_file, :less_than=>15.megabyte, :message => "must be smaller than 15MB"
-    
+    validates_attachment_presence :rich_file
+
+    do_not_validate_attachment_file_type :rich_file
+
     before_create :clean_file_name
 
     after_create :cache_style_uris_and_save
