@@ -15,7 +15,7 @@ module Rich
                       :convert_options => Proc.new { |a| Rich.convert_options[a] }
     
     validate :check_content_type
-    validates_attachment_content_type :rich_file, :content_type => /\Aimage\/.*\Z/
+    validates_attachment_content_type :rich_file
     validates_attachment_size :rich_file, :less_than=>15.megabyte, :message => "must be smaller than 15MB"
     validates_attachment_presence :rich_file
 
